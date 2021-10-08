@@ -1,5 +1,9 @@
 @import "config";
 
+body, html {
+  font: $font-stack;
+}
+
 h1 {
   text-decoration: underline wavy hotpink;
 }
