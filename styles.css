@@ -8,8 +8,3 @@
 body, html {
   font: 300 16px "Open sans", sans-serif;
 }
-
-h1 {
-  -webkit-text-decoration: underline wavy hotpink;
-          text-decoration: underline wavy hotpink;
-}

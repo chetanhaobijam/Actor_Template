@@ -8,16 +8,227 @@
 
   <!-- Bootstrap CSS -->
 <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <h1 class="text-primary">Hello World</h1>
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <div class="nav-brand">
+      <img src="" alt="Artist Logo">
+    </div>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Filmography</a>
+      </li>
+      <li>
+        <a href="#">Testimonials</a>
+      </li>
+      <li>
+        <a href="#">Gallery</a> 
+        <i class="fas fa-chevron-top"></i>
+        <ul>
+          <li>Photo</li>
+          <li>Instagram</li>
+          <li>Videos</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+    <button class="collapse-icon">
+      <img src="" alt="Collapse Icon">
+    </button>
+    <button class="close-nav">
+      <img src="" alt="Close Nav">
+    </button>
+  </nav>
+
+  <main>
+    <!-- Carousel Section -->
+    <section class="carousel">
+      <div class="carousel-container">
+        <div class="carousel-item">
+          <h3>Welcome to Artist's World</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="carousel-item">
+          <h3>Welcome to your one stop source</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="carousel-item">
+          <h3>Enter the realm of a visual treat</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="carousel-item"></div>
+        <div class="carousel-item"></div>
+      </div>
+      <div class="navigation">
+        <div class="left-nav"></div>
+        <div class="right-nav"></div>
+      </div>
+      <div class="dots">
+        <div class="dot-items"></div>
+        <div class="dot-items"></div>
+        <div class="dot-items"></div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+      <h1>Welcome to Artist's World</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ipsa! Impedit adipisci modi incidunt, provident debitis quibusdam! Quibusdam quisquam ad reiciendis, vitae numquam quaerat omnis, ipsam alias, optio sit hic!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni harum velit omnis veniam pariatur delectus neque reprehenderit nam odio voluptas?</p>
+    </section>
+
+    <!-- contents Section -->
+    <section class="contents">
+      <div class="content-container">
+        <!-- Content Item One -->
+        <div class="content-item">
+          <div class="content-icon">
+            <img src="" alt="Biography Icon">
+          </div>
+          <h3>Biography</h3>
+          <p>Biography and facts about the Artist</p>
+        </div>
+
+        <!-- Content Item Two -->
+        <div class="content-item">
+          <div class="content-icon">
+            <img src="" alt="Awards Icon">
+          </div>
+          <h3>Awards & Nominations</h3>
+          <p>A complete list of the Artist's awards and nominations</p>
+        </div>
+
+        <!-- Content Item Three -->
+        <div class="content-item">
+          <div class="content-icon">
+            <img src="" alt="Charities Icon">
+          </div>
+          <h3>Charities</h3>
+          <p>Find out about all the charities the Artist supports</p>
+        </div>
+
+        <!-- Content Item Four -->
+        <div class="content-item">
+          <div class="content-icon">
+            <img src="" alt="Through the Years Icon">
+          </div>
+          <h3>Through the Years</h3>
+          <p>Look at how the Artist has changed throughout the years</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <div class="menus">
+        <a href="#" class="menu-item" id="show-all">Show All</a>
+        <a href="#" class="menu-item" id="music-videos">Music Videos</a>
+        <a href="#" class="menu-item" id="events">Events</a>
+      </div>
+      <div class="gallery-container">
+        <!-- Gallery Item One -->
+        <div class="gallery-item" id="music-video">
+          <img src="" alt="Gallery Image">
+          <div class="gallery-menus">
+            <div class="gallery-options">
+              <button class="watch">Watch</button>
+              <button class="view">View</button>
+            </div>
+            <h3>Lorem, ipsum.</h3>
+            <p>Music Videos</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item Two -->
+        <div class="gallery-item" id="music-video">
+          <img src="" alt="Gallery Image">
+          <div class="gallery-menus">
+            <div class="gallery-options">
+              <button class="watch">Watch</button>
+              <button class="view">View</button>
+            </div>
+            <h3>Lorem, ipsum.</h3>
+            <p>Music Videos</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item Three -->
+        <div class="gallery-item" id="music-video">
+          <img src="" alt="Gallery Image">
+          <div class="gallery-menus">
+            <div class="gallery-options">
+              <button class="watch">Watch</button>
+              <button class="view">View</button>
+            </div>
+            <h3>Lorem, ipsum.</h3>
+            <p>Music Videos</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item Four -->
+        <div class="gallery-item" id="event">
+          <img src="" alt="Gallery Image">
+          <div class="gallery-menus">
+            <div class="gallery-options">
+              <button class="watch">Watch</button>
+              <button class="view">View</button>
+            </div>
+            <h3>Lorem, ipsum.</h3>
+            <p>Events</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item Five -->
+        <div class="gallery-item" id="event">
+          <img src="" alt="Gallery Image">
+          <div class="gallery-menus">
+            <div class="gallery-options">
+              <button class="watch">Watch</button>
+              <button class="view">View</button>
+            </div>
+            <h3>Lorem, ipsum.</h3>
+            <p>Events</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item Six -->
+        <div class="gallery-item" id="event">
+          <img src="" alt="Gallery Image">
+          <div class="gallery-menus">
+            <div class="gallery-options">
+              <button class="watch">Watch</button>
+              <button class="view">View</button>
+            </div>
+            <h3>Lorem, ipsum.</h3>
+            <p>Events</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2021. Artist Name. All Rights Reserved</p>
+    <p>Website Template Made by 
+      <a href="https://github.com/chetanhaobijam">Haobijam Chetan Singh.</a>
+    </p>
+  </footer>
 
   <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 
   <script src="/main.js"></script>
 </body>
