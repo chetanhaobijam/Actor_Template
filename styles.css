@@ -9,6 +9,10 @@
   display: block !important;
 }
 
+.flex-show {
+  display: flex !important;
+}
+
 body, html {
   font: 300 16px "Open sans", sans-serif;
 }
@@ -58,10 +62,12 @@ body::before {
   list-style: none;
   display: none;
   position: absolute;
-  top: 35px;
-  background: #fff;
+  top: 18px;
+  padding-top: 1rem;
+  background: transparent;
   text-transform: capitalize;
   font-weight: 300;
+  background: #fff;
 }
 .nav .nav-ul .nav-item .nav-dropdown li {
   padding: 1rem 6rem 1rem 0.5rem;
@@ -84,4 +90,66 @@ body::before {
 }
 .nav .close-nav {
   display: none;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  background: transparent;
+  color: #fff;
+  padding: 0.7rem 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+.nav .close-nav:hover {
+  color: #6619ab;
+}
+
+@media (max-width: 1000px) {
+  .nav .nav-ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: #f4348299;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .nav .nav-ul .nav-item {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #999;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .nav .nav-ul .nav-item a {
+    color: #fff;
+  }
+  .nav .nav-ul .nav-item .fa-chevron-down {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .nav .nav-ul .nav-item .nav-dropdown {
+    background: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .nav .nav-ul .nav-item .nav-dropdown li {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid #999;
+  }
+  .nav .collapse-icon {
+    display: block;
+    margin-left: auto;
+  }
+  .nav .close-nav {
+    border: 1px solid #999;
+  }
 }

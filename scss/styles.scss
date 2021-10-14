@@ -51,10 +51,12 @@ body::before {
         list-style: none;
         display: none;
         position: absolute;
-        top: 35px;
-        background: $primary-white;
+        top: 18px;
+        padding-top: 1rem;
+        background: transparent;
         text-transform: capitalize;
         font-weight: 300;
+        background: $primary-white;
 
         li {
           padding: 1rem 6rem 1rem 0.5rem;
@@ -83,5 +85,19 @@ body::before {
   }
   .close-nav {
     display: none;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    background: transparent;
+    color: #fff;
+    padding: 0.7rem 0.9rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-purple;
+    }
   }
 }
+
+@import "media";
