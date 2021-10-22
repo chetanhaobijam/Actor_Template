@@ -22,5 +22,18 @@ closeNav.addEventListener("click", () => {
   closeNav.classList.remove("show");
 })
 
+// Owl Carousel Script
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: true,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    smartSpeed: 1500,
+    autoplayHoverPause: true
+  });
+});
 
 
