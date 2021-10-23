@@ -357,4 +357,22 @@ body::before {
   }
 }
 
+footer {
+  background-color: $primary-purple;
+  color: $primary-white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.7em;
+
+  a {
+    color: $primary-white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 @import "media";
