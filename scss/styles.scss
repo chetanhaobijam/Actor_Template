@@ -101,99 +101,101 @@ body::before {
   }
 }
 
-main {
-  .carousel {
-    position: relative;
-    padding-bottom: 2rem;
+.carousel {
+  position: relative;
+  padding-bottom: 2rem;
 
-    .carousel-item {
-      height: 95vh;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  .carousel-item {
+    height: 95vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      h3 {
-        font: 300 2rem 'Raleway', sans-serif;
-        background-color: $navbar-pink;
-        padding: 1rem;
-        margin: 5rem auto 1rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
+    h3 {
+      font: 300 2rem 'Raleway', sans-serif;
+      background-color: $navbar-pink;
+      padding: 1rem;
+      margin: 5rem auto 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    p {
+      background-color: $navbar-pink;
+      color: #fff;
+      padding: 1rem;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .owl-nav {
+    %owl-button {
+      outline: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff !important;
+      font-size: 5rem !important;
+      font-weight: 500 !important;
+      height: 100%;
+      width: 5rem;
+      margin: 0 !important;
+      opacity: 0.5;
+      transition: all ease 1s;
+
+      &:hover {
+        opacity: 1;
+        background: transparent !important;
+      }
+    }
+
+    .owl-prev {
+      @extend %owl-button;
+      left: 0;
+    }
+
+    .owl-next {
+      @extend %owl-button;
+      right: 0;
+    }
+  }
+  
+  .owl-dots {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -2em;
+    opacity: 0.5;
+    transition: opacity ease 1s;
+
+    &:hover {
+      opacity: 1;
+    }
+    
+    .owl-dot {
+      outline: none;
+
+      span {
+        background: $background-black;
       }
 
-      p {
-        background-color: $navbar-pink;
-        color: #fff;
-        padding: 1rem;
-        font-size: 1.3rem;
-        letter-spacing: 0.1em;
+      &:hover {
+        span {
+          background: $background-green;
+        }
       }
-    } 
+
+      &.active {
+        span {
+          background: $background-green;
+        }
+      }
+    }
   }
 }
-
-/* Owl Carousel Dot Styles */
-.owl-dots {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: -2em;
-  opacity: 0.5;
-  transition: opacity ease 1s;
-}
-
-.owl-dots:hover {
-  opacity: 1;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  background: $background-black;
-}
-
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: $background-green;
-}
-
-.owl-dots button {
-  border: none;
-  outline: none;
-}
-
-/* Owl Carousel Navigation Arrows Styles */
-.owl-nav button{
-  border: none;
-  outline: none;
-}
-
-.owl-prev, .owl-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff !important;
-  font-size: 5rem !important;
-  font-weight: 500 !important;
-  height: 100%;
-  width: 5rem;
-  margin: 0 !important;
-  opacity: 0.5;
-  transition: all ease 1s;
-}
-
-.owl-prev:hover, .owl-next:hover {
-  opacity: 1;
-  background: transparent !important;
-}
-
-.owl-prev {
-  left: 0;
-}
-
-.owl-next {
-  right: 0;
-}
-
 
 // Carousel Background Images
 .carousel-first {
@@ -206,6 +208,20 @@ main {
 
 .carousel-third {
   background: url("https://images.unsplash.com/photo-1444464666168-49d633b86797?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80") center/cover no-repeat;
+}
+
+.intro {
+  text-align: center;
+  margin: 2rem 3rem;
+  
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
 }
 
 @import "media";

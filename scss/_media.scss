@@ -56,4 +56,45 @@
       border: $grey-border;
     }
   }
+
+  .carousel {
+    .carousel-item {
+      h3 {
+       font-size: 1.5rem;
+       letter-spacing: 0.1em; 
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .carousel {
+    .carousel-item {
+      h3 {
+        letter-spacing: 0;
+        margin: 0 2rem 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 567px) {
+  .carousel {
+    .carousel-item {
+      h3 {
+        margin: 0 4rem 1rem;
+      }
+    }
+  }
+
+  .intro {
+    margin: 2rem 1rem;
+  }
 }

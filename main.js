@@ -29,8 +29,8 @@ $(document).ready(function(){
     loop: true,
     nav: true,
     dots: true,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     smartSpeed: 1500,
     autoplayHoverPause: true
   });
