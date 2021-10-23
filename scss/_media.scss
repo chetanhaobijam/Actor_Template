@@ -69,6 +69,13 @@
       }
     }
   }
+
+  .gallery {
+    .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
 }
 
 @media(max-width: 768px) {
@@ -83,11 +90,22 @@
       }
     }
   }
+
+  .gallery {
+    .gallery-container {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(6, 1fr);
+
+      
+    }
+  }
 }
 
 @media(max-width: 567px) {
   .carousel {
     .carousel-item {
+      height: 500px;
+
       h3 {
         margin: 0 4rem 1rem;
       }
@@ -96,5 +114,9 @@
 
   .intro {
     margin: 3rem 1rem;
+  }
+
+  .gallery {
+    padding: 3rem 2rem;
   }
 }
