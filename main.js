@@ -66,6 +66,9 @@ const displayAll = () => {
   someEvent.forEach(event => {
     event.style.display = "block";
   })
+  showAll.classList.add("active");
+  musicVideos.classList.remove("active");
+  events.classList.remove("active");
 }
 
 const displayOnlyMusic = () => {
@@ -75,6 +78,9 @@ const displayOnlyMusic = () => {
   someEvent.forEach(event => {
     event.style.display = "none";
   })
+  showAll.classList.remove("active");
+  musicVideos.classList.add("active");
+  events.classList.remove("active");
 }
 
 const displayOnlyEvent = () => {
@@ -84,6 +90,9 @@ const displayOnlyEvent = () => {
   someEvent.forEach(event => {
     event.style.display = "block";
   })
+  showAll.classList.remove("active");
+  musicVideos.classList.remove("active");
+  events.classList.add("active");
 }
 
 showAll.addEventListener("click", displayAll);

@@ -25,6 +25,10 @@ $grey-border: 1px solid $text-grey;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .show {
   display: block !important;
 }
@@ -37,3 +41,4 @@ $grey-border: 1px solid $text-grey;
   transform: scale(1.5) !important;
   filter: grayscale(0%) !important;
 }
+

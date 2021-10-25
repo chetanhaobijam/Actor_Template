@@ -20,7 +20,7 @@
         text-align: center;
         padding-bottom: 0.5rem;
 
-        a {
+        a, span {
           color: $primary-white;
         }
 
@@ -89,14 +89,14 @@
         font-size: 1rem;
       }
     }
-  }
+  } 
+}
 
+@media(max-width: 660px) {
   .gallery {
     .gallery-container {
       grid-template-columns: auto;
       grid-template-rows: repeat(6, 1fr);
-
-      
     }
   }
 }
@@ -113,9 +113,13 @@
   }
 
   .intro {
-    margin: 3rem 1rem;
+    margin: 1rem;
+    padding: 1rem;
   }
 
+  .contents {
+    padding: 2rem;
+  }
   .gallery {
     padding: 3rem 2rem;
   }
