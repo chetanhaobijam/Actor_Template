@@ -7,6 +7,12 @@ const closeNav = document.querySelector(".close-nav");
 const galleryItem = document.querySelectorAll(".gallery-item");
 const galleryImage = document.querySelectorAll(".gallery-item img");
 const galleryMenus = document.querySelectorAll(".gallery-menus");
+const showAll = document.querySelector("#show-all");
+const musicVideos = document.querySelector("#music-videos");
+const events = document.querySelector("#events");
+const musicVideo = document.querySelectorAll(".music-video");
+const someEvent = document.querySelectorAll(".event");
+
 
 // Toggle display Nav Gallery Dropdown
 navGallery.addEventListener("click", () => {
@@ -51,3 +57,35 @@ for(let i = 0; i < galleryImage.length; i++) {
     galleryMenus[i].classList.remove("show");
   })
 }
+
+// Toggle Gallery Selection
+const displayAll = () => {
+  musicVideo.forEach(video => {
+    video.style.display = "block";
+  })
+  someEvent.forEach(event => {
+    event.style.display = "block";
+  })
+}
+
+const displayOnlyMusic = () => {
+  musicVideo.forEach(video => {
+    video.style.display = "block";
+  })
+  someEvent.forEach(event => {
+    event.style.display = "none";
+  })
+}
+
+const displayOnlyEvent = () => {
+  musicVideo.forEach(video => {
+    video.style.display = "none";
+  })
+  someEvent.forEach(event => {
+    event.style.display = "block";
+  })
+}
+
+showAll.addEventListener("click", displayAll);
+musicVideos.addEventListener("click", displayOnlyMusic);
+events.addEventListener("click", displayOnlyEvent);
