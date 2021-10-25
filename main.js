@@ -12,7 +12,18 @@ const musicVideos = document.querySelector("#music-videos");
 const events = document.querySelector("#events");
 const musicVideo = document.querySelectorAll(".music-video");
 const someEvent = document.querySelectorAll(".event");
+// ===================================================================
 
+// Animate on Scroll Script
+AOS.init({
+  disable: () => {
+    return window.innerWidth < 768;
+  },
+  offset: 400,
+  duration: 2000,
+  delay: 1500
+});
+// ================================
 
 // Toggle display Nav Gallery Dropdown
 navGallery.addEventListener("click", () => {
@@ -30,6 +41,7 @@ closeNav.addEventListener("click", () => {
   navUl.classList.remove("flex-show");
   closeNav.classList.remove("show");
 })
+// =============================================
 
 // Owl Carousel Script
 $(document).ready(function(){
@@ -44,6 +56,7 @@ $(document).ready(function(){
     autoplayHoverPause: true
   });
 });
+// ====================================
 
 // Toggle Display of Gallery Menus when hover on Gallery Item
 for(let i = 0; i < galleryImage.length; i++) {
@@ -57,6 +70,8 @@ for(let i = 0; i < galleryImage.length; i++) {
     galleryMenus[i].classList.remove("show");
   })
 }
+
+// ============================================================
 
 // Toggle Gallery Selection
 const displayAll = () => {
@@ -98,3 +113,4 @@ const displayOnlyEvent = () => {
 showAll.addEventListener("click", displayAll);
 musicVideos.addEventListener("click", displayOnlyMusic);
 events.addEventListener("click", displayOnlyEvent);
+//======================================================
