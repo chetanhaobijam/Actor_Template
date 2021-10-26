@@ -108,29 +108,72 @@ body::before {
   position: relative;
   padding-bottom: 2rem;
 
-  .carousel-item {
-    height: 95vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h3 {
-      font: 300 2rem 'Raleway', sans-serif;
-      background-color: $navbar-pink;
-      padding: 1rem;
-      margin: 5rem auto 1rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+  .owl-item {
+    .carousel-item {
+      height: 95vh;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      h3 {
+        font: 300 2rem 'Raleway', sans-serif;
+        background-color: $navbar-pink;
+        padding: 1rem;
+        margin: 5rem auto 1rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        position: relative;
+        top: -600px;
+      }
+  
+      p {
+        background-color: $navbar-pink;
+        color: #fff;
+        padding: 1rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.1em;
+        position: relative;
+        opacity: 0;
+        left: -600px;
+      }
     }
 
-    p {
-      background-color: $navbar-pink;
-      color: #fff;
-      padding: 1rem;
-      font-size: 1.3rem;
-      letter-spacing: 0.1em;
+    &.active {
+      .carousel-item {
+        h3 {
+          animation-name: slide-down;
+          animation-duration: 2s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+        }
+
+        p {
+          animation: slide-right 2s 2s forwards;
+        }
+
+        // Animations
+        @keyframes slide-down {
+          0% {
+            top: -600px;
+          }
+          100% {
+            top: 0;
+          }
+        }
+
+        @keyframes slide-right {
+          0% {
+            opacity: 0;
+            left: -600px;
+          }
+          100% {
+            opacity: 1;
+            left: 0;
+          }
+        }
+      }
     }
   }
 
@@ -381,5 +424,7 @@ footer {
     }
   }
 }
+
+
 
 @import "media";

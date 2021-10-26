@@ -120,7 +120,7 @@ body::before {
   position: relative;
   padding-bottom: 2rem;
 }
-.carousel .carousel-item {
+.carousel .owl-item .carousel-item {
   height: 95vh;
   text-align: center;
   display: flex;
@@ -128,20 +128,75 @@ body::before {
   justify-content: center;
   align-items: center;
 }
-.carousel .carousel-item h3 {
+.carousel .owl-item .carousel-item h3 {
   font: 300 2rem "Raleway", sans-serif;
   background-color: #f4348299;
   padding: 1rem;
   margin: 5rem auto 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  position: relative;
+  top: -600px;
 }
-.carousel .carousel-item p {
+.carousel .owl-item .carousel-item p {
   background-color: #f4348299;
   color: #fff;
   padding: 1rem;
   font-size: 1.3rem;
   letter-spacing: 0.1em;
+  position: relative;
+  opacity: 0;
+  left: -600px;
+}
+.carousel .owl-item.active .carousel-item h3 {
+  -webkit-animation-name: slide-down;
+          animation-name: slide-down;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.carousel .owl-item.active .carousel-item p {
+  -webkit-animation: slide-right 2s 2s forwards;
+          animation: slide-right 2s 2s forwards;
+}
+@-webkit-keyframes slide-down {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes slide-down {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes slide-right {
+  0% {
+    opacity: 0;
+    left: -600px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    left: -600px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
 .carousel .owl-nav .owl-next, .carousel .owl-nav .owl-prev {
   outline: none;
