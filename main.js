@@ -21,7 +21,7 @@ AOS.init({
   },
   offset: 400,
   duration: 2000,
-  delay: 2000,
+  delay: 1000,
   once: true
 });
 // ================================
