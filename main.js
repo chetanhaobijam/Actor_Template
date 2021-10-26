@@ -51,7 +51,7 @@ $(document).ready(function(){
     loop: true,
     nav: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 1000,
     smartSpeed: 1500,
     autoplayHoverPause: true
@@ -115,3 +115,19 @@ showAll.addEventListener("click", displayAll);
 musicVideos.addEventListener("click", displayOnlyMusic);
 events.addEventListener("click", displayOnlyEvent);
 //======================================================
+
+// Change Navbar Color on Scroll
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 100) {
+	    $(".nav-ul a").css("color" , "#6619ab");
+	    $(".nav-ul span").css("color" , "#6619ab");
+	  }
+
+	  else{
+		  $(".nav-ul a").css("color" , "#000");	
+		  $(".nav-ul span").css("color" , "#000");	
+	  }
+  })
+})

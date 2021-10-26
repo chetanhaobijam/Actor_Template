@@ -350,7 +350,7 @@ body::before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 0;
+    column-gap: 0.05em;
 
     .gallery-item {
       position: relative;
