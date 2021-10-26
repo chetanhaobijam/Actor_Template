@@ -121,13 +121,13 @@ $(document).ready(function(){
   $(window).scroll(function(){
   	var scroll = $(window).scrollTop();
 	  if (scroll > 100) {
-	    $(".nav-ul a").css("color" , "#6619ab");
-	    $(".nav-ul span").css("color" , "#6619ab");
+	    $(".active-nav a").css("color" , "#6619ab");
+	    $(".active-nav span").css("color" , "#6619ab");
 	  }
 
 	  else{
-		  $(".nav-ul a").css("color" , "#000");	
-		  $(".nav-ul span").css("color" , "#000");	
+		  $(".active-nav a").css("color" , "#000");	
+		  $(".active-nav span").css("color" , "#000");	
 	  }
   })
 })
