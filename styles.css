@@ -483,11 +483,11 @@ footer a:hover {
   }
 }
 @media (max-width: 768px) {
-  .carousel .carousel-item h3 {
+  .carousel .owl-item .carousel-item h3 {
     letter-spacing: 0;
     margin: 0 2rem 1rem;
   }
-  .carousel .carousel-item p {
+  .carousel .owl-item .carousel-item p {
     font-size: 1rem;
   }
 }
@@ -498,10 +498,10 @@ footer a:hover {
   }
 }
 @media (max-width: 567px) {
-  .carousel .carousel-item {
+  .carousel .owl-item .carousel-item {
     height: 500px;
   }
-  .carousel .carousel-item h3 {
+  .carousel .owl-item .carousel-item h3 {
     margin: 0 4rem 1rem;
   }
 
