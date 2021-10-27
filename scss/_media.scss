@@ -76,6 +76,13 @@
       grid-template-rows: repeat(3, 1fr);
     }
   }
+
+  .about-main {
+    .intro-heading, .about-ending {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+  }
 }
 
 @media(max-width: 768px) {
@@ -115,16 +122,35 @@
       }
     }  
   }
-
   .intro {
     margin: 1rem;
     padding: 1rem;
   }
-
   .contents {
     padding: 2rem;
   }
   .gallery {
     padding: 3rem 2rem;
+  }
+  .about-main {
+    h1, .intro-heading, .about-ending {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .about-main {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .intro-heading {
+      .intro-text {
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }
