@@ -14,18 +14,6 @@ const musicVideo = document.querySelectorAll(".music-video");
 const someEvent = document.querySelectorAll(".event");
 // ===================================================================
 
-// Animate on Scroll Script
-AOS.init({
-  disable: () => {
-    return window.innerWidth < 768;
-  },
-  offset: 400,
-  duration: 2000,
-  delay: 1000,
-  once: true
-});
-// ================================
-
 // Toggle display Nav Gallery Dropdown
 navGallery.addEventListener("click", () => {
   navDropDown.classList.toggle("show");
@@ -44,6 +32,50 @@ closeNav.addEventListener("click", () => {
 })
 // =============================================
 
+// Toggle Display of Gallery Menus when hover on Gallery Item
+for(let i = 0; i < galleryImage.length; i++) {
+  galleryItem[i].addEventListener("mouseenter", () => {
+    galleryImage[i].classList.add("image-hover");
+    galleryMenus[i].classList.add("show");
+  })
+
+  galleryItem[i].addEventListener("mouseleave", () => {
+    galleryImage[i].classList.remove("image-hover");
+    galleryMenus[i].classList.remove("show");
+  })
+}
+
+// ============================================================
+
+// Change Navbar Color on Scroll
+$(document).ready(function(){
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if (scroll > 100) {
+      $(".active-nav a").css("color" , "#6619ab");
+      $(".active-nav span").css("color" , "#6619ab");
+    }
+
+    else{
+      $(".active-nav a").css("color" , "#000");	
+      $(".active-nav span").css("color" , "#000");	
+    }
+  })
+})
+//======================================================
+
+// Animate on Scroll Script
+AOS.init({
+  disable: () => {
+    return window.innerWidth < 768;
+  },
+  offset: 400,
+  duration: 2000,
+  delay: 1000,
+  once: true
+});
+// ================================
+
 // Owl Carousel Script
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
@@ -59,20 +91,6 @@ $(document).ready(function(){
 });
 // ====================================
 
-// Toggle Display of Gallery Menus when hover on Gallery Item
-for(let i = 0; i < galleryImage.length; i++) {
-  galleryItem[i].addEventListener("mouseenter", () => {
-    galleryImage[i].classList.add("image-hover");
-    galleryMenus[i].classList.add("show");
-  })
-
-  galleryItem[i].addEventListener("mouseleave", () => {
-    galleryImage[i].classList.remove("image-hover");
-    galleryMenus[i].classList.remove("show");
-  })
-}
-
-// ============================================================
 
 // Toggle Gallery Selection
 const displayAll = () => {
@@ -115,19 +133,3 @@ showAll.addEventListener("click", displayAll);
 musicVideos.addEventListener("click", displayOnlyMusic);
 events.addEventListener("click", displayOnlyEvent);
 //======================================================
-
-// Change Navbar Color on Scroll
-$(document).ready(function(){
-  $(window).scroll(function(){
-  	var scroll = $(window).scrollTop();
-	  if (scroll > 100) {
-	    $(".active-nav a").css("color" , "#6619ab");
-	    $(".active-nav span").css("color" , "#6619ab");
-	  }
-
-	  else{
-		  $(".active-nav a").css("color" , "#000");	
-		  $(".active-nav span").css("color" , "#000");	
-	  }
-  })
-})

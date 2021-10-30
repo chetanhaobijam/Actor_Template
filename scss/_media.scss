@@ -98,7 +98,14 @@
         }
       }
     }
-  } 
+  }
+  .film-main {
+    table {
+      th:first-child, tr td:first-child {
+        max-width: 100px;
+      }
+    } 
+  }
 }
 
 @media(max-width: 660px) {
@@ -136,6 +143,15 @@
     h1, .intro-heading, .about-ending {
       padding-left: 2rem;
       padding-right: 2rem;
+    }
+  }
+  .film-main {
+    h1 {
+      padding-top: 2rem;
+    }
+    table {
+      width: 90%;
+      margin-bottom: 2rem;
     }
   }
 }

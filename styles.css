@@ -459,6 +459,53 @@ footer a:hover {
   height: 100%;
 }
 
+.film-main {
+  background: #f5f5f5;
+}
+.film-main h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 10rem;
+}
+.film-main p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0.5rem auto 2rem;
+  width: 80%;
+  line-height: 1.5em;
+}
+.film-main table {
+  width: 80%;
+  margin: 0 auto 5rem;
+}
+.film-main table th, .film-main table td {
+  padding: 0.5rem;
+}
+.film-main table th:first-child, .film-main table tr td:first-child {
+  max-width: 40px;
+}
+.film-main table th {
+  background-color: #fff;
+  font-size: 0.9rem;
+}
+.film-main table td {
+  font-size: 0.9rem;
+}
+.film-main table tbody {
+  font-weight: 500;
+}
+.film-main table tbody tr:nth-child(even) {
+  background-color: #dedede;
+}
+.film-main table tbody tr:hover {
+  background-color: #fff;
+}
+.film-main table, .film-main tr, .film-main td {
+  border: 1px solid #cecece;
+  border-collapse: collapse;
+}
+
 @media (max-width: 1000px) {
   .nav .nav-ul {
     display: none;
@@ -535,6 +582,10 @@ footer a:hover {
   .carousel .owl-item .carousel-item p {
     font-size: 1rem;
   }
+
+  .film-main table th:first-child, .film-main table tr td:first-child {
+    max-width: 100px;
+  }
 }
 @media (max-width: 660px) {
   .gallery .gallery-container {
@@ -566,6 +617,14 @@ footer a:hover {
   .about-main h1, .about-main .intro-heading, .about-main .about-ending {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .film-main h1 {
+    padding-top: 2rem;
+  }
+  .film-main table {
+    width: 90%;
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 450px) {
