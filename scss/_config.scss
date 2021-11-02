@@ -27,6 +27,7 @@ $grey-border: 1px solid $text-grey;
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .show {

@@ -540,5 +540,57 @@ footer {
   }
 }
 
+// Styles for Testimonials Page
+.testimonial-main {
+  padding: 10rem 5rem 7rem;
+
+  .testimonial-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    .quote-icon {
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.7em;
+      margin-bottom: 1rem;
+    }
+    .testimonial-person {
+      display: flex;
+      gap: 1rem;
+
+      .person-image {
+        max-width: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .person-description {
+        color: $primary-purple;
+
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .testimonial-item:nth-child(odd) {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .testimonial-item:nth-child(even) {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
 
 @import "media";
