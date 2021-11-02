@@ -64,34 +64,6 @@ $(document).ready(function(){
 })
 //======================================================
 
-// Animate on Scroll Script
-AOS.init({
-  disable: () => {
-    return window.innerWidth < 768;
-  },
-  offset: 400,
-  duration: 2000,
-  delay: 1000,
-  once: true
-});
-// ================================
-
-// Owl Carousel Script
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    nav: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    smartSpeed: 1500,
-    autoplayHoverPause: true
-  });
-});
-// ====================================
-
-
 // Toggle Gallery Selection
 const displayAll = () => {
   musicVideo.forEach(video => {
@@ -133,3 +105,32 @@ showAll.addEventListener("click", displayAll);
 musicVideos.addEventListener("click", displayOnlyMusic);
 events.addEventListener("click", displayOnlyEvent);
 //======================================================
+
+// Animate on Scroll Script
+AOS.init({
+  disable: () => {
+    return window.innerWidth < 768;
+  },
+  offset: 400,
+  duration: 2000,
+  delay: 500,
+  once: true
+});
+// ================================
+
+// Owl Carousel Script
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    smartSpeed: 1500,
+    autoplayHoverPause: true
+  });
+});
+// ====================================
+
+
