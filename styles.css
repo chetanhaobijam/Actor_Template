@@ -341,7 +341,7 @@ body::before {
 .gallery .gallery-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   -moz-column-gap: 0.05em;
        column-gap: 0.05em;
 }
@@ -663,7 +663,7 @@ footer a:hover {
 
   .gallery .gallery-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
   }
 
   .about-main .intro-heading, .about-main .about-ending {
@@ -691,7 +691,7 @@ footer a:hover {
 @media (max-width: 660px) {
   .gallery .gallery-container {
     grid-template-columns: auto;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
   }
 
   .contact-main {

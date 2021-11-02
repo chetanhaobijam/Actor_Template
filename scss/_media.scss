@@ -73,7 +73,7 @@
   .gallery {
     .gallery-container {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
   }
 
@@ -117,7 +117,7 @@
   .gallery {
     .gallery-container {
       grid-template-columns: auto;
-      grid-template-rows: repeat(6, 1fr);
+      grid-template-rows: repeat(6, auto);
     }
   }
   .contact-main {
