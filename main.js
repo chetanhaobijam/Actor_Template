@@ -5,14 +5,23 @@ const navUl = document.querySelector(".nav-ul");
 const collapseIcon = document.querySelector(".collapse-icon");
 const closeNav = document.querySelector(".close-nav");
 const galleryItem = document.querySelectorAll(".gallery-item");
-const galleryImage = document.querySelectorAll(".gallery-item img");
-const galleryMenus = document.querySelectorAll(".gallery-menus");
 const showAll = document.querySelector("#show-all");
 const musicVideos = document.querySelector("#music-videos");
 const events = document.querySelector("#events");
 const musicVideo = document.querySelectorAll(".music-video");
 const someEvent = document.querySelectorAll(".event");
 // ===================================================================
+
+// Animate on Scroll Script
+AOS.init({
+  disable: () => {
+    return window.innerWidth < 768;
+  },
+  offset: 200,
+  duration: 1000,
+  once: true
+});
+// ================================
 
 // Toggle display Nav Gallery Dropdown
 navGallery.addEventListener("click", () => {
@@ -32,21 +41,6 @@ closeNav.addEventListener("click", () => {
 })
 // =============================================
 
-// Toggle Display of Gallery Menus when hover on Gallery Item
-for(let i = 0; i < galleryImage.length; i++) {
-  galleryItem[i].addEventListener("mouseenter", () => {
-    galleryImage[i].classList.add("image-hover");
-    galleryMenus[i].classList.add("show");
-  })
-
-  galleryItem[i].addEventListener("mouseleave", () => {
-    galleryImage[i].classList.remove("image-hover");
-    galleryMenus[i].classList.remove("show");
-  })
-}
-
-// ============================================================
-
 // Change Navbar Color on Scroll
 $(document).ready(function(){
   $(window).scroll(function(){
@@ -63,19 +57,6 @@ $(document).ready(function(){
   })
 })
 //======================================================
-
-
-// Animate on Scroll Script
-AOS.init({
-  disable: () => {
-    return window.innerWidth < 768;
-  },
-  offset: 400,
-  duration: 2000,
-  delay: 500,
-  once: true
-});
-// ================================
 
 // Toggle Gallery Selection
 const displayAll = () => {
