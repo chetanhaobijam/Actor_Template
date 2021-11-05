@@ -513,15 +513,15 @@ main header {
 main header h1 {
   font-weight: 600;
 }
-main .videos-text, main .instagram-text, main .gallery-text {
+main .videos-text, main .instagram-text, main .photos-text {
   padding: 2rem 5rem;
 }
-main .videos-text h4, main .instagram-text h4, main .gallery-text h4 {
+main .videos-text h4, main .instagram-text h4, main .photos-text h4 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
-main .videos-text .first-p, main .instagram-text .first-p, main .gallery-text .first-p {
+main .videos-text .first-p, main .instagram-text .first-p, main .photos-text .first-p {
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -546,7 +546,12 @@ main .image-grid .image-grid-item .preview {
   top: 40%;
   left: 40%;
   cursor: pointer;
+}
+main .image-grid .image-grid-item .preview .fa-instagram {
   color: #cd486b;
+}
+main .image-grid .image-grid-item .preview .fa-search {
+  color: #fff;
 }
 
 .contact-main {
@@ -733,6 +738,16 @@ main .image-grid .image-grid-item .preview {
 
   .contact-main .contact-container form .form-group {
     padding: 0;
+  }
+
+  main header {
+    padding: 2rem;
+  }
+  main .videos-text, main .instagram-text, main .gallery-text {
+    padding: 2rem;
+  }
+  main .image-grid {
+    padding: 0 2rem 1rem;
   }
 }
 @media (max-width: 450px) {

@@ -549,7 +549,7 @@ main {
     }
   }
 
-  .videos-text, .instagram-text, .gallery-text {
+  .videos-text, .instagram-text, .photos-text {
     padding: 2rem 5rem;
 
     h4 {
@@ -585,7 +585,13 @@ main {
         left: 40%;
         cursor: pointer;
         // color: #8a3ab9;
-        color: #cd486b;
+        
+        .fa-instagram {
+          color: #cd486b;
+        }
+        .fa-search {
+          color: $primary-white;
+        }
       }
     }
     
