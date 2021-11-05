@@ -10,6 +10,8 @@ const musicVideos = document.querySelector("#music-videos");
 const events = document.querySelector("#events");
 const musicVideo = document.querySelectorAll(".music-video");
 const someEvent = document.querySelectorAll(".event");
+const imageGridItem = document.querySelectorAll(".image-grid-item");
+const imagePreview = document.querySelectorAll(".preview");
 // ===================================================================
 
 // Animate on Scroll Script
@@ -47,16 +49,28 @@ $(document).ready(function(){
     var scroll = $(window).scrollTop();
     if (scroll > 100) {
       $(".active-nav a").css("color" , "#6619ab");
-      $(".active-nav span").css("color" , "#6619ab");
+      $("span.active-nav").css("color" , "#6619ab");
     }
 
     else{
       $(".active-nav a").css("color" , "#000");	
-      $(".active-nav span").css("color" , "#000");	
+      $("span.active-nav").css("color" , "#000");	
     }
   })
 })
 //======================================================
+
+// Toggle Image Gallery Preview Button
+for(let i = 0; i < imageGridItem.length; i++) {
+  imageGridItem[i].addEventListener("mouseenter", () => {
+    imagePreview[i].classList.add("show");
+  })
+  imageGridItem[i].addEventListener("mouseleave", () => {
+    imagePreview[i].classList.remove("show");
+  })
+}
+// ====================================================
+
 
 // Toggle Gallery Selection
 const displayAll = () => {
