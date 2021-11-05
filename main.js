@@ -71,6 +71,20 @@ for(let i = 0; i < imageGridItem.length; i++) {
 }
 // ====================================================
 
+// Owl Carousel Script
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    smartSpeed: 1500,
+    autoplayHoverPause: true
+  });
+});
+// ====================================
 
 // Toggle Gallery Selection
 const displayAll = () => {
@@ -113,20 +127,3 @@ showAll.addEventListener("click", displayAll);
 musicVideos.addEventListener("click", displayOnlyMusic);
 events.addEventListener("click", displayOnlyEvent);
 //======================================================
-
-// Owl Carousel Script
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    nav: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    smartSpeed: 1500,
-    autoplayHoverPause: true
-  });
-});
-// ====================================
-
-
