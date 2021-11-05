@@ -32,7 +32,7 @@ body::before {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 3;
 
   .nav-brand {
      max-width: 200px;
@@ -355,67 +355,12 @@ body::before {
     .gallery-item {
       position: relative;
       overflow: hidden;
+      max-width: 500px;
+      height: 300px;
 
-      i {
-        position: absolute;
-        top: 42%;
-        left: 42%;
-        font-size: 3.5rem;
-        opacity: 0.8;
-        z-index: 1;
-      }
-
-      img {
+      iframe {
         width: 100%;
         height: 100%;
-        transition: all 0.7s ease;
-        filter: grayscale(100%);
-
-      }
-      .gallery-menus {
-        position: absolute;
-        top: 30%;
-        z-index: 2;
-        width: 100%;
-        text-align: center;
-        color: $primary-white;
-        display: none;
-  
-        .gallery-options {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 2rem;
-  
-          button {
-            border: 1px solid $primary-white;
-            padding: 0.2rem 0.7rem;
-            background: transparent;
-            border-radius: 20px;
-            margin-right: 1rem;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            color: $primary-white;
-            cursor: pointer;
-
-            &:hover {
-              background: $background-black;
-              border-color: $background-black;
-            }
-          }
-        }
-        
-        a {
-          display: inline-block;
-          font-size: 1.3rem;
-          font-weight: 400;
-          margin-bottom: 1rem;
-          color: $primary-white;
-          text-decoration: none;
-        }
-  
-        p {
-          font-size: 0.9rem;
-        }
       }
     }
   }
@@ -594,10 +539,120 @@ footer {
 }
 
 // Styles for Gallery - Photos Page
+main {
+  header {
+    background-color: $background-grey;
+    padding: 4rem 5rem;
 
-// Styles for Gallery - Instagram Page
+    h1 {
+      font-weight: 600;
+    }
+  }
 
-// Styles for Gallery - Videos
+  .videos-text, .instagram-text, .photos-text {
+    padding: 2rem 5rem;
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .first-p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .image-grid {
+    padding: 0 5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.3em;
+
+    .image-grid-item {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .preview {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 40%;
+        left: 40%;
+        cursor: pointer;
+        // color: #8a3ab9;
+        
+        .fa-instagram {
+          color: #cd486b;
+        }
+        .fa-search {
+          color: $primary-white;
+        }
+      }
+    } 
+  }
+  /* Modal Lighthouse */
+  /* The Modal (background) */
+  .my-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: fade-out($background-black, 0.1);
+    z-index: 4;
+    padding: 1rem;
+  
+    .close-btn {
+      color: #fff;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      cursor: pointer;
+      
+      &:hover, &:focus {
+        color: #999;
+      }
+    }
+    .modal-container {
+      max-width: 400px;
+      position: relative;
+      margin: 0 auto;
+
+      .modal-controls {
+        font-size: 2rem;
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        opacity: 0.2;
+        transition: opacity ease 0.5s;
+        cursor: pointer;
+        
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .prev {
+        left: -1.5em;
+      }
+      
+      .next {
+        right: -1.5em;
+      }
+      .slides {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
 // Styles for Contact Page
 .contact-main {
@@ -649,10 +704,22 @@ footer {
           padding: 0.7rem 1rem;
           border-radius: 5px;
           margin: 1rem auto;
+          cursor: pointer;
+
+          &:hover {
+            background-color: lighten($background-black, 10%);
+            border-color: lighten($background-black, 10%);
+          }
+
+          &:focus, &:active {
+            box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }
   }
 }
+
+
 
 @import "media";
