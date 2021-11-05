@@ -185,6 +185,13 @@
     .image-grid {
       padding: 0 2rem 1rem;
     }
+    .my-modal {
+      .modal-container {
+        .slides {
+          margin-top: 2rem;
+        }
+      }
+    }
   }
 }
 
@@ -197,6 +204,21 @@
       .intro-text {
         h2 {
           font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  main {
+    .my-modal {
+      .modal-container {
+        .prev {
+          left: 0.5em;
+        }
+        .next {
+          right: 0.5em;
+        }
+        .slides {
+          margin-top: 5rem;
         }
       }
     }

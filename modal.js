@@ -25,4 +25,10 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+window.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") {
+    closeModal();
+  }
+})
 // ====================================================

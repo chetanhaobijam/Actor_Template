@@ -809,6 +809,9 @@ main .my-modal .modal-container .slides img {
   main .image-grid {
     padding: 0 2rem 1rem;
   }
+  main .my-modal .modal-container .slides {
+    margin-top: 2rem;
+  }
 }
 @media (max-width: 450px) {
   .about-main h1 {
@@ -816,5 +819,15 @@ main .my-modal .modal-container .slides img {
   }
   .about-main .intro-heading .intro-text h2 {
     font-size: 1.5rem;
+  }
+
+  main .my-modal .modal-container .prev {
+    left: 0.5em;
+  }
+  main .my-modal .modal-container .next {
+    right: 0.5em;
+  }
+  main .my-modal .modal-container .slides {
+    margin-top: 5rem;
   }
 }
